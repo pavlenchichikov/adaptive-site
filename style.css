@@ -96,8 +96,13 @@ body {
     text-align: center;
 }
 .product-card img {
-    width: 100%;
-    height: auto;
+    width: 360px;
+    height: 420p;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+
 }
 .product-title {
     margin: 10px 0;
@@ -117,11 +122,12 @@ body {
     text-decoration: none;
 }
 
-@media (max-width: 768px) {
+@media(max-width:768px) {
     .hero, .categories {
         flex-direction: column;
     }
     .product-grid {
-        grid-template-columns: repeat(2, 1fr);
+        display:grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
 }
