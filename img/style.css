@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f2f2;
+}
+.header {
+    background-color: #1a1a1a;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    color: #ff69b4;
+    font-size: 24px;
+}
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+.nav-icons img {
+    width: 20px;
+    height: 20px;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+.hero-image {
+    flex: 1;
+}
+.hero-image img {
+    width: 100%;
+    height: auto;
+}
+.hero-text {
+    flex: 1;
+    padding: 20px;
+}
+.hero-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+.category {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+.category img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+.category:hover img {
+    transform: scale(1.1);
+}
+.category-text {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    color: white;
+}
+.accessories {
+    padding: 20px;
+}
+.accessories img {
+    width: 100%;
+    height: auto;
+}
+.featured-items {
+    padding: 20px;
+}
+.featured-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+.product-card {
+    background-color: white;
+    padding: 10px;
+    text-align: center;
+}
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+.product-title {
+    margin: 10px 0;
+}
+.product-price {
+    color: #ff69b4;
+    font-weight: bold;
+}
+.browse-all {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .hero, .categories {
+        flex-direction: column;
+    }
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
